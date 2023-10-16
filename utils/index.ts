@@ -43,10 +43,10 @@ export const deleteSearchParams = (type: string) => {
 
 export async function fetchCars(filters: FilterProps) {
   const { manufacturer, year, model, limit, fuel } = filters;
-
+  const RAPID_API_KEY = "6eab08ff1bmsh13727dfd64ece5ep1db363jsn815173b65349";
   // Set the required headers for the API request
   const headers: HeadersInit = {
-    "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY || "",
+    "X-RapidAPI-Key": RAPID_API_KEY || "",
     "X-RapidAPI-Host": "cars-by-api-ninjas.p.rapidapi.com",
   };
 
